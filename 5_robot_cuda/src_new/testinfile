@@ -1,0 +1,47 @@
+# lines starting with # are comments
+# first line must be a comment
+# One concept per line
+50		# population size
+50		# Chromosome length
+50		# Number of generations to run
+0 2		# format: kindofcrossover  numberofcrossoverpoints
+#	Kind of Crossover
+#	0	npoints for binary strings
+#	1	PMX does not use numberofcrossoverpoints
+#	2	OX
+#	3	Greedy
+0.66		# Prob. of Xover
+0.001		# Prob. of Mutation
+out		# Outputfile name
+1 2		# CHC, lambda = 2
+# format
+# What kind of generational strategy, how large is parent+child population
+#	0	Children replace parents, lambda is 1
+#	1	CHC, lambda > 1
+#	else    Children replace parents
+#
+0		# Choosing mates 0 is fitness proportional
+#	0	Fitness proportional
+#	1	Random
+#	else	Fitness Proportional
+1.2		# Scaling factor
+1 0.1 2 20 0 0	
+# 0 0  Normal GA (no saving to CB no injection from CB
+# format 
+# savecases? injFraction injPeriod stopInject InjStrategy DistanceMetric
+# if saveCases is 1, cases added to casebase else no additions
+# if injectFraction is > 0.0, inject cases every injectPeriod generations
+# into population using InjStrategy and DistanceMetric
+#	injectStrategies:
+#	0	closest to best
+#	1	Probabilistic closest to best
+#	2	Furthest from Worst
+#	3	Probabilistic Furthest from Worst
+#	else	Closest to Best
+#	distanceMetric
+#	0	Hamming
+#	1	Euclidean
+#	2	LCS
+#	else	Hamming
+# Stop injecting at generation stopInject
+10000		# if you are going to maximize;
